@@ -15,9 +15,9 @@
                 <p class="address">{{resume.address}}</p>
             </div>
             <div class = "top-container-download end-spacing">
-                <a href="#"><i class="fa fa-download">Download</i></i></a><br><br>
-                <a class="edit" href="{% url 'create_resume:update-identity' %}"><i class="fa fa-edit"></i></a>
-                <a class="delete" href="#"><i class="fa fa-trash"></i></a>
+                {% comment %} <a href="#"><i class="fa fa-download">Download</i></i></a><br><br> {% endcomment %}
+                {% comment %} <a class="edit" href="{% url 'create_resume:update-identity' %}"><i class="fa fa-edit"></i></a> {% endcomment %}
+                {% comment %} <a class="delete" href="#"><i class="fa fa-trash"></i></a> {% endcomment %}
             </div>
         </div>
         <div class="top-container">
@@ -27,8 +27,9 @@
             <div class = "top-container-education-detail spaceing ">
                 {% for q in qualifications %}
                     <p class="degree"><b>{{q.name}} &nbsp; {{q.location}}</b> 
-                    <a class="edit links" href="#"><i class="fa fa-edit"></i></a>
-                    <a class="delete links" href="#"><i class="fa fa-trash"></i></a></p>
+                    {% comment %} <a class="edit links" href="#"><i class="fa fa-edit"></i></a>
+                    <a class="delete links" href="#"><i class="fa fa-trash"></i></a> {% endcomment %}
+                    </p>
                     <p class="duration">{{q.degree}} &nbsp; {{q.branch}}</p>
                     <p class="duration">{{q.duration}}</p>
                 {% endfor %}
@@ -52,8 +53,8 @@
                 <a class="Add button"href="{% url 'create_resume:create-experience' %}"><spam> + </spam> Add job </a>
             </div>
             <div class = "top-container-download end-spacing">
-                <a class="edit" href="#"><i class="fa fa-edit"></i></a>
-                <a class="delete" href="{% url 'create_resume:delete-experience' e.id %}"><i class="fa fa-trash"></i></a>
+                {% comment %} <a class="edit" href="#"><i class="fa fa-edit"></i></a>
+                <a class="delete" href="{% url 'create_resume:delete-experience' e.id %}"><i class="fa fa-trash"></i></a> {% endcomment %}
             </div>
             {% endfor %}
             
@@ -73,8 +74,8 @@
                     <a class="Add button"href="{% url 'create_resume:create-internship' %}"><spam> + </spam> Add internship </a>
                 </div>
             <div class = "top-container-download end-spacing">
-            <a class="edit" href="#"><i class="fa fa-edit"></i></a>
-            <a class="delete" href="#"><i class="fa fa-trash"></i></a>
+            {% comment %} <a class="edit" href="#"><i class="fa fa-edit"></i></a>
+            <a class="delete" href="#"><i class="fa fa-trash"></i></a> {% endcomment %}
             </div>
         </div>
         <div class="top-container">
@@ -92,8 +93,8 @@
             <a class="Add button"href="{% url 'create_resume:create-certifications' %}"><spam> + </spam> Add Certification </a>
             </div>
             <div class = "top-container-download end-spacing">
-            <a class="edit" href="#"><i class="fa fa-edit"></i></a>
-            <a class="delete" href="#"><i class="fa fa-trash"></i></a>
+            {% comment %} <a class="edit" href="#"><i class="fa fa-edit"></i></a>
+            <a class="delete" href="#"><i class="fa fa-trash"></i></a> {% endcomment %}
             </div>
         </div>
         <div class="top-container">
@@ -111,8 +112,8 @@
             <a class="Add button"href="{% url 'create_resume:create-projects' %}"><spam> + </spam> Add Project </a>
             </div>
             <div class = "top-container-download end-spacing">
-            <a class="edit" href="#"><i class="fa fa-edit"></i></a>
-            <a class="delete" href="#"><i class="fa fa-trash"></i></a>
+            {% comment %} <a class="edit" href="#"><i class="fa fa-edit"></i></a>
+            <a class="delete" href="#"><i class="fa fa-trash"></i></a> {% endcomment %}
             </div>
         </div>
         <div class="top-container">
@@ -128,8 +129,8 @@
             <a class="Add button"href="{% url 'create_resume:create-technical-skills' %}"><spam> + </spam> Add Technical Skill </a>
             </div>
             <div class = "top-container-download end-spacing">
-            <a class="edit" href="#"><i class="fa fa-edit"></i></a>
-            <a class="delete" href="#"><i class="fa fa-trash"></i></a>
+            {% comment %} <a class="edit" href="#"><i class="fa fa-edit"></i></a>
+            <a class="delete" href="#"><i class="fa fa-trash"></i></a> {% endcomment %}
             </div>
         </div>
         

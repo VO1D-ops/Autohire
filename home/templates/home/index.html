@@ -85,17 +85,17 @@
         </a> {% endcomment %}
         <hr class="sidebar-divider">
         <a href="/"> HOME </a>
-        <a href="test/" method='POST'> test </a>  
+        {% comment %} <a href="test/" method='POST'> test </a>   {% endcomment %}
 
         {% if user.is_authenticated %}
           {% if request.user|has_group:"Employer" %}
-            <li><a href="{% url 'home:home_page' %}" class="mr-2 text-light">Profile</a></li>
+            {% comment %} <li><a href="{% url 'home:home_page' %}" class="mr-2 text-light">Profile</a></li> {% endcomment %}
             <li><a href="{% url 'home:addJob' %}" class="mr-2 text-light">Create Jobs</a></li>
             <li><a href="{% url 'home:viewJobs' %}" class="mr-2 text-light">View Jobs</a></li>
             <li><a href="{% url 'home:candidates_applications_view' %}" class="mr-2 text-light">Applications</a></li>
-            <li><a href="{% url 'home:home_page' %}" class="mr-2 text-light">Hired</a></li>
+            {% comment %} <li><a href="{% url 'home:home_page' %}" class="mr-2 text-light">Hired</a></li> {% endcomment %}
           {% elif request.user|has_group:"Candidate" %}
-            <li><a href="{% url 'home:home_page' %}" class="mr-2 text-light">Profile</a></li>
+            {% comment %} <li><a href="{% url 'home:home_page' %}" class="mr-2 text-light">Profile</a></li> {% endcomment %}
             <li><a href="{% url 'create_resume:resume'  %}" class="mr-2 text-light">My Resume</a></li>
             <li><a href="{% url 'home:application_view'  %}" class="mr-2 text-light">Applications</a></li>
           {% endif %}
